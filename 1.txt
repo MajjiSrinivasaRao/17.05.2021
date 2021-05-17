@@ -1,0 +1,39 @@
+//Set kth bit 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+	int n;// input
+	cin>>n;
+
+	
+	int k;// read the set bit
+	cin>>k;
+	int i;
+	int arr[10];// to store binary elements
+	for(i=0;n>0;i++)
+       	{
+		arr[i]=n%2;    
+		n=n/2;		
+        }
+
+	int j=0;int sum=0;
+	for(i=i-1;i>=0;i--)
+	{
+		//cout<<arr[i]<<" ";// print binary values
+		j++;
+		if(j==k)
+			arr[i]=1;
+		//cout<<arr[i]<<" ";
+		sum=sum+(pow(2,i)*arr[i]);
+	}
+	cout<<sum;
+	
+	
+return 0;
+}
+
+
+	
