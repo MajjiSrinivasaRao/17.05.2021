@@ -8,8 +8,7 @@ int find(int n)
 
 if(n==1)
 	return 1;
-if(n>0)
-	return(n*find(n-1));
+return(n*find(n-1));
 }
 
 
